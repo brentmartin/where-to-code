@@ -23,6 +23,12 @@ RSpec.describe Place, type: :model do
         @place = Place.create(name: "test name", address: "100 Example St, City, Tx 78701", description: nil, hours: "X until X")
         expect(@place).to be_valid
       end
+
+      it "should allow validation without hours" do
+        @place = Place.create(name: "test name", address: "100 Example St, City, Tx 78701", description: "test description", hours: nil)
+        expect(@place).to be_valid
+      end
+    end
   end
   end
 end
