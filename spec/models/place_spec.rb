@@ -30,5 +30,9 @@ RSpec.describe Place, type: :model do
       end
     end
   end
+
+  describe "associations" do
+    context "when setting up db schema for Place" do
+    end
   end
 end
