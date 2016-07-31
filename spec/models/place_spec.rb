@@ -33,6 +33,11 @@ RSpec.describe Place, type: :model do
 
   describe "associations" do
     context "when setting up db schema for Place" do
+      it "should have many opinions associated" do
+        @place = Place.reflect_on_association(:opinions)
+        @place.macro.should == :has_many
+      end
+
     end
   end
 end
