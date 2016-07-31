@@ -38,6 +38,10 @@ RSpec.describe Place, type: :model do
         @place.macro.should == :has_many
       end
 
+      it "should have many votes associated" do
+        @place = Place.reflect_on_association(:votes)
+        @place.macro.should == :has_many
+      end
     end
   end
 end
