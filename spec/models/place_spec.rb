@@ -11,23 +11,23 @@ RSpec.describe Place, type: :model do
       expect(Place.all.count).to eq(1)
     end
 
-    context "when validating new Place" do
-      it "should not validate without a name" do
+    context "when creating new Place" do
+      it "should not let a Place be created without a name" do
         @place.name = nil
         expect(@place).to_not be_valid
       end
 
-      it "should not validate without an address" do
+      it "should not let a Place be created without an address" do
         @place.address = nil
         expect(@place).to_not be_valid
       end
 
-      it "should allow validation without description" do
+      it "should allow a Place to be created without description" do
         @place.description = nil
         expect(@place).to be_valid
       end
 
-      it "should allow validation without hours" do
+      it "should allow a Place to be created without hours" do
         @place.hours = nil
         expect(@place).to be_valid
       end
