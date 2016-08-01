@@ -29,6 +29,11 @@ RSpec.describe Opinion, type: :model do
         @opinion = Opinion.create(head: "opinion test head", body: "", place_id: 1)
         expect(@opinion).to_not be_valid
       end
+
+      it "should not accept body of an Opinion with more than 160 characters" do
+        @opinion = Opinion.create(head: "opinion test head", body: "the example for this string is exactly 161 characters, which is enough to make this test pass. One less character, in other words 160 characters, would break it.", place_id: 1)
+        expect(@opinion).to_not be_valid
+      end
     end
 
     describe "associations" do
