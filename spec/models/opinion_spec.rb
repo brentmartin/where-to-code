@@ -20,6 +20,7 @@ RSpec.describe Opinion, type: :model do
       it "should not let an Opinion be created without an ID associated to a Place" do
         @opinion.place_id = nil
         expect(@opinion).to_not be_valid
+      context "that is for a Place" do
       end
 
       it "should allow a Opinion to be created without a head" do
