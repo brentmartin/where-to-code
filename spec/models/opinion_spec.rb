@@ -17,7 +17,6 @@ RSpec.describe Opinion, type: :model do
       end
 
       it "should not let an Opinion be created without an ID associated to a Place" do
-        @place = Place.create(name: "test name", address: "100 Example St, City, Tx 78701", description: "test description", hours: "X until X")
         expect(@opinion).to_not be_valid
       end
 
