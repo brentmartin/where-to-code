@@ -7,6 +7,9 @@ RSpec.describe Vote, type: :model do
       @vote = Vote.create!(pick: "example_vote")
       expect(Vote.all.count).to eq(1)
     end
+
+    context "when creating a new Vote" do
+  end
   describe "associations" do
     context "when setting up db schema for Vote" do
       it "should belong to places" do
