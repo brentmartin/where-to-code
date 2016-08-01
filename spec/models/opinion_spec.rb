@@ -35,15 +35,15 @@ RSpec.describe Opinion, type: :model do
         expect(@opinion).to_not be_valid
       end
     end
+  end
 
-    describe "associations" do
-      context "when setting up db schema for Opinion" do
-        it "should belong to places" do
-          @opinion = Opinion.reflect_on_association(:places)
-          @opinion.macro.should == :belongs_to
-        end
-
+  describe "associations" do
+    context "when setting up db schema for Opinion" do
+      it "should belong to places" do
+        @opinion = Opinion.reflect_on_association(:places)
+        @opinion.macro.should == :belongs_to
       end
     end
   end
+
 end
