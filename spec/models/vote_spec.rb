@@ -4,7 +4,7 @@ RSpec.describe Vote, type: :model do
 
   describe "creation" do
     it "should have one item created after being created" do
-      @vote = Vote.create!(pick: "example_vote")
+      @vote = Vote.create!(pick: "example_vote", place_id: 1)
       expect(Vote.all.count).to eq(1)
     end
 
