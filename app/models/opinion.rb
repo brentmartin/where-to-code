@@ -3,5 +3,5 @@ class Opinion < ActiveRecord::Base
 
   validates_presence_of :body
   validates_presence_of :place_id
-  validates_length_of :body, minimum: 1, allow_blank: true
+  validates_length_of :body, minimum: 1, maximum: 160, allow_blank: true
 end
