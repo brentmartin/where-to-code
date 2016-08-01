@@ -13,22 +13,27 @@ RSpec.describe Opinion, type: :model do
 
     context "when creating a new Opinion" do
       it "should not let an Opinion be created without a body" do
+        @opinion.body = nil
         expect(@opinion).to_not be_valid
       end
 
       it "should not let an Opinion be created without an ID associated to a Place" do
+        @opinion.place_id = nil
         expect(@opinion).to_not be_valid
       end
 
       it "should allow a Opinion to be created without a head" do
+        @opinion.head = nil
         expect(@opinion).to be_valid
       end
 
       it "should not accept body of an Opinion with less than 1 character" do
+        @opinion.body = ""
         expect(@opinion).to_not be_valid
       end
 
       it "should not accept body of an Opinion with more than 160 characters" do
+        @opinion.body = "the example for this string is exactly 161 characters, which is enough to make this test pass. One less character, in other words 160 characters, would break it."
         expect(@opinion).to_not be_valid
       end
     end
