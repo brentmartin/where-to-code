@@ -30,6 +30,11 @@ RSpec.describe Vote, type: :model do
           @vote = Vote.create(pick: "up_vote", place_id: 1)
           expect(@vote).to be_valid
         end
+
+        it "should accept the entry 'down_vote'" do
+          @vote = Vote.create(pick: "down_vote", place_id: 1)
+          expect(@vote).to be_valid
+        end
       end
   end
   describe "associations" do
