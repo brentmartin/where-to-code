@@ -9,6 +9,10 @@ RSpec.describe Vote, type: :model do
     end
 
     context "when creating a new Vote" do
+      it "should not let a Vote be created without a pick" do
+        @vote = Vote.create(pick: nil)
+        expect(@vote).to_not be_valid
+      end
   end
   describe "associations" do
     context "when setting up db schema for Vote" do
