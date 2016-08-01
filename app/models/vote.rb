@@ -3,5 +3,5 @@ class Vote < ActiveRecord::Base
 
   validates_presence_of :pick
   validates_presence_of :place_id
-  validates_inclusion_of :pick, in: ["example_vote", "up_vote"]
+  validates_inclusion_of :pick, in: ["example_vote", "up_vote", "down_vote"]
 end
