@@ -20,6 +20,7 @@ RSpec.describe Vote, type: :model do
           expect(@vote).to_not be_valid
         end
 
+        it "should be a Place already created that has an ID that matches the place_id of the Vote"
       context "that needs a valid option for pick" do
         it "should not accept an invalid entry" do
           @vote = Vote.create(pick: "invalid_vote", place_id: 1)
