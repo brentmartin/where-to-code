@@ -13,6 +13,12 @@ RSpec.describe Opinion, type: :model do
         @opinion = Opinion.create(head: "opinion test head", body: nil)
         expect(@opinion).to_not be_valid
       end
+
+      it "should not let an Opinion be created without an ID associated to a Place" do
+        @place = Place.create(name: "test name", address: "100 Example St, City, Tx 78701", description: "test description", hours: "X until X")
+        @opinion = Opinion.create(head: "opinion test head", body: "opinion test body, testing the body of the content", place_id: nil)
+        expect(@opinion).to_not be_valid
+      end
     end
 
     describe "associations" do
