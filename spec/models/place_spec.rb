@@ -11,7 +11,7 @@ RSpec.describe Place, type: :model do
       expect(Place.all.count).to eq(1)
     end
 
-    context "when creating new Place" do
+    context "when creating a new Place" do
       it "should not let a Place be created without a name" do
         @place.name = nil
         expect(@place).to_not be_valid
@@ -47,4 +47,5 @@ RSpec.describe Place, type: :model do
       end
     end
   end
+  
 end
