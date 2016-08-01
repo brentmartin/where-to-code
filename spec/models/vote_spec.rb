@@ -21,6 +21,10 @@ RSpec.describe Vote, type: :model do
         end
 
       context "that needs a valid option for pick" do
+        it "should not accept an invalid entry" do
+          @vote = Vote.create(pick: "invalid_vote", place_id: 1)
+          expect(@vote).to_not be_valid
+        end
       end
   end
   describe "associations" do
