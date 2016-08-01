@@ -23,6 +23,7 @@ RSpec.describe Opinion, type: :model do
           expect(@opinion).to_not be_valid
         end
 
+        it "should be a Place already created that has an ID that matches the place_id of the Opinion"
       end
 
       it "should allow a Opinion to be created without a head" do
