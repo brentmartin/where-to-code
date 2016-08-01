@@ -19,6 +19,9 @@ RSpec.describe Vote, type: :model do
           @vote = Vote.create(pick: "example_vote", place_id: nil)
           expect(@vote).to_not be_valid
         end
+
+      context "that needs a valid option for pick" do
+      end
   end
   describe "associations" do
     context "when setting up db schema for Vote" do
