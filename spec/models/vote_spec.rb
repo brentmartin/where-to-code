@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Vote, type: :model do
 
   before(:each) do
-    @vote = Vote.create!(pick: "example_vote", place_id: 1)
+    @vote = Vote.create!(pick: "up_vote", place_id: 1)
   end
 
   describe "creation" do
@@ -53,5 +53,5 @@ RSpec.describe Vote, type: :model do
       end
     end
   end
-  
+
 end
