@@ -9,6 +9,10 @@ RSpec.describe Opinion, type: :model do
     end
 
     context "when creating a new Opinion" do
+      it "should not let an Opinion be created without a body" do
+        @opinion = Opinion.create(head: "opinion test head", body: nil)
+        expect(@opinion).to_not be_valid
+      end
     end
 
     describe "associations" do
