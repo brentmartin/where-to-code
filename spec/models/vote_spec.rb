@@ -24,6 +24,8 @@ RSpec.describe Vote, type: :model do
         end
 
         it "should be a Place already created that has an ID that matches the place_id of the Vote"
+      end
+
       context "that needs a valid option for pick" do
         it "should not accept an invalid entry" do
           @vote.pick = "invalid_vote"
@@ -40,7 +42,9 @@ RSpec.describe Vote, type: :model do
           expect(@vote).to be_valid
         end
       end
+    end
   end
+
   describe "associations" do
     context "when setting up db schema for Vote" do
       it "should belong to places" do
@@ -49,4 +53,5 @@ RSpec.describe Vote, type: :model do
       end
     end
   end
+  
 end
