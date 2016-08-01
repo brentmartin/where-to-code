@@ -19,6 +19,11 @@ RSpec.describe Opinion, type: :model do
         @opinion = Opinion.create(head: "opinion test head", body: "opinion test body, testing the body of the content", place_id: nil)
         expect(@opinion).to_not be_valid
       end
+
+      it "should allow a Opinion to be created without a head" do
+        @opinion = Opinion.create(head: nil, body: "opinion test body, testing the body of the content", place_id: 1)
+        expect(@opinion).to be_valid
+      end
     end
 
     describe "associations" do
