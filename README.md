@@ -23,8 +23,13 @@ Project Status
 [] Get feedback
 [] Make a new task list
 
+Gems, Libraries, and Technologies
+-------------
+
+This application uses:
 - Ruby 2.3.0
 - Rails 4.2.6
+- RSpec
 
 Issues
 -------------
