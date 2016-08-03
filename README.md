@@ -1,50 +1,41 @@
-Wheretocode
+Where To Code
 ================
+Where to Code is a layout of places to for coders to code in Austin - curated by developers for developers.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+A live version of this will be up as soon as I deploy.
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
-
-Rails Composer is supported by developers who purchase our RailsApps tutorials.
-
-Problems? Issues?
+Description
 -----------
+As a developer in Austin, I've found it challenging to find _good_ information on public places to code (coffee shops, co-working spaces, libraries, ect.). So I've set out to do something about that.
 
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
+Also, as a budding developer, this is a project for me to learn/practice writing code using TDD - [test driven development](https://en.wikipedia.org/wiki/Test-driven_development)
 
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
+Project Status
+-------------
+[x] Model Testing
+[] Controller Testing
+[] View Testing
+[] Initial Deployment
+[] Add in [maps](https://github.com/apneadiving/Google-Maps-for-Rails)
+[] Build a Users Model
+[] Add authentication with [Clearance](https://github.com/thoughtbot/clearance)
+[] Ship MVP
+[] Get feedback
+[] Make a new task list
 
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
-
-Ruby on Rails
+Gems, Libraries, and Technologies
 -------------
 
-This application requires:
-
+This application uses:
 - Ruby 2.3.0
 - Rails 4.2.6
-
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
-
-Getting Started
----------------
-
-Documentation and Support
--------------------------
+- RSpec
 
 Issues
 -------------
-
-Similar Projects
-----------------
-
-Contributing
-------------
+Having these? Feel free to [email me](mailto:bmart35@gmail.com) about it.
 
 Credits
 -------
-
-License
--------
+This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
+provided by the [RailsApps Project](http://railsapps.github.io/).
