@@ -33,6 +33,9 @@ This application uses:
 
 Issues
 -------------
+Having these? Feel free to [email me](mailto:bmart35@gmail.com) about it.
 
 Credits
 -------
+This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
+provided by the [RailsApps Project](http://railsapps.github.io/).
