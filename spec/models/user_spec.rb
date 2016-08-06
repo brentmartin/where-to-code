@@ -7,4 +7,8 @@ RSpec.describe User, type: :model do
     @user = User.create!(email: "test@example.com", password: "password")
       expect(User.all.count).to eq(1)
     end
+  describe "associations" do
+    context "when setting up db schema for User" do
+    end
+  end
 end
