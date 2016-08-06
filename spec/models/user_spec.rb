@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
 
     context "when creating a new User" do
       it "should not let a User be created without a name" do
-        @user = User.create!(email: "test@example.com", password: "password", name: nil)
+        @user = User.create(email: "test@example.com", password: "password", name: nil)
         expect(@user).to_not be_valid
       end
   describe "associations" do
