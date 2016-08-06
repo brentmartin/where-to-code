@@ -7,6 +7,12 @@ RSpec.describe User, type: :model do
     @user = User.create!(email: "test@example.com", password: "password")
       expect(User.all.count).to eq(1)
     end
+
+    context "when creating a new User" do
+      it "should not let a User be created without a name" do
+        @user = User.create!(email: "test@example.com", password: "password", name: nil)
+        expect(@user).to_not be_valid
+      end
   describe "associations" do
     context "when setting up db schema for User" do
       it "should have many opinions associated" do
