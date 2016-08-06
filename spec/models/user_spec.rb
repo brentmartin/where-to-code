@@ -9,6 +9,10 @@ RSpec.describe User, type: :model do
     end
   describe "associations" do
     context "when setting up db schema for User" do
+      it "should have many opinions associated" do
+        @user = User.reflect_on_association(:opinions)
+        @user.macro.should == :has_many
+      end
     end
   end
 end
