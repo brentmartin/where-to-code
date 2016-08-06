@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
 
   describe "creation" do
     it "should have one item created after being created" do
-    @user = User.create!(email: "test@example.com", password: "password")
+    @user = User.create!(email: "test@example.com", password: "password", name: "Brent")
       expect(User.all.count).to eq(1)
     end
 
