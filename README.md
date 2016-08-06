@@ -13,12 +13,12 @@ Also, as a _budding developer_, this is a project for me to learn/practice writi
 Project Status
 -------------
 - [x] Model Testing
+- [x] Add authentication with [Clearance](https://github.com/thoughtbot/clearance)
 - [ ] Controller Testing
 - [ ] View Testing
 - [ ] Initial Deployment
 - [ ] Add in [maps](https://github.com/apneadiving/Google-Maps-for-Rails)
 - [ ] Build a Users Model
-- [ ] Add authentication with [Clearance](https://github.com/thoughtbot/clearance)
 - [ ] Ship MVP
 - [ ] Get feedback
 - [ ] Make a new task list
@@ -30,6 +30,7 @@ This application uses:
 - Ruby 2.3.0
 - Rails 4.2.6
 - RSpec
+- [Clearance](https://github.com/thoughtbot/clearance) - Rails authentication with email & password.
 
 Contributing
 -------------
