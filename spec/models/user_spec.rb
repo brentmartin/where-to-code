@@ -29,6 +29,7 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
   describe "associations" do
     context "when setting up db schema for User" do
       it "should have many opinions associated" do

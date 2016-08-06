@@ -53,5 +53,4 @@ RSpec.describe Vote, type: :model do
       end
     end
   end
-
 end

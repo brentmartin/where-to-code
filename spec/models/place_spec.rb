@@ -47,5 +47,4 @@ RSpec.describe Place, type: :model do
       end
     end
   end
-  
 end
