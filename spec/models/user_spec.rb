@@ -13,14 +13,17 @@ RSpec.describe User, type: :model do
 
     context "when creating a new User" do
       it "should not let a User be created without a name" do
+        @user.name = nil
         expect(@user).to_not be_valid
       end
 
       it "should not let a User be created without an email address" do
+        @user.email = nil
         expect(@user).to_not be_valid
       end
 
       it "should not let a User be created without a password" do
+        # Have to make a new User here, rather than use the before(:each) block
         @user = User.create(email: "test@example.com", password: nil, name: "Brent")
         expect(@user).to_not be_valid
       end
