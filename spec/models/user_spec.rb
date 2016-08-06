@@ -13,6 +13,11 @@ RSpec.describe User, type: :model do
         @user = User.reflect_on_association(:opinions)
         @user.macro.should == :has_many
       end
+
+      it "should have many votes associated" do
+        @user = User.reflect_on_association(:votes)
+        @user.macro.should == :has_many
+      end
     end
   end
 end
