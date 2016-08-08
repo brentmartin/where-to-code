@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Opinion, type: :model do
 
   before(:each) do
-    @opinion = Opinion.create!(head: "opinion test head", body: "opinion test body, testing the body of the content", place_id: 1)
+    @opinion = Opinion.create!(head: "opinion test head", body: "opinion test body, testing the body of the content", place_id: 1, user_id: 1)
   end
 
   describe "creation" do
