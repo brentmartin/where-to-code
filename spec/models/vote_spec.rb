@@ -22,6 +22,8 @@ RSpec.describe Vote, type: :model do
           @vote.user_id = nil
           expect(@vote).to_not be_valid
         end
+
+        it "should have a User already created that has an ID that matches the user_id of the Vote"
       end
 
       context "that is for a Place" do
