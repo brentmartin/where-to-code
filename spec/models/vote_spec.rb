@@ -51,6 +51,11 @@ RSpec.describe Vote, type: :model do
         @vote = Vote.reflect_on_association(:places)
         @vote.macro.should == :belongs_to
       end
+
+      it "should belong to users" do
+        @vote = Vote.reflect_on_association(:users)
+        @vote.macro.should == :belongs_to
+      end
     end
   end
 end
