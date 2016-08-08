@@ -49,6 +49,11 @@ RSpec.describe Opinion, type: :model do
         @opinion = Opinion.reflect_on_association(:places)
         @opinion.macro.should == :belongs_to
       end
+
+      it "should belong to places" do
+        @opinion = Opinion.reflect_on_association(:users)
+        @opinion.macro.should == :belongs_to
+      end
     end
   end
 end
