@@ -17,6 +17,9 @@ RSpec.describe Opinion, type: :model do
         expect(@opinion).to_not be_valid
       end
 
+      context "that is from a User" do
+      end
+
       context "that is for a Place" do
         it "should not let an Opinion be created without a place_id" do
           @opinion.place_id = nil
