@@ -18,6 +18,10 @@ RSpec.describe Vote, type: :model do
       end
 
       context "that is from a User" do
+        it "should not let a Vote be created without a user_id" do
+          @vote.user_id = nil
+          expect(@vote).to_not be_valid
+        end
       end
 
       context "that is for a Place" do
