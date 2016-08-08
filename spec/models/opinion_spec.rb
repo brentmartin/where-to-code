@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Opinion, type: :model do
 
   before(:each) do
-    @opinion = Opinion.create!(head: "opinion test head", body: "opinion test body, testing the body of the content", place_id: 1)
+    @opinion = Opinion.create!(head: "opinion test head", body: "opinion test body, testing the body of the content", place_id: 1, user_id: 1)
   end
 
   describe "creation" do
@@ -15,6 +15,15 @@ RSpec.describe Opinion, type: :model do
       it "should not let an Opinion be created without a body" do
         @opinion.body = nil
         expect(@opinion).to_not be_valid
+      end
+
+      context "that is from a User" do
+        it "should not let an Opinion be created without a user_id" do
+          @opinion.user_id = nil
+          expect(@opinion).to_not be_valid
+        end
+
+        it "should have a User already created that has an ID that matches the user_id of the Opinion"
       end
 
       context "that is for a Place" do
@@ -47,6 +56,11 @@ RSpec.describe Opinion, type: :model do
     context "when setting up db schema for Opinion" do
       it "should belong to places" do
         @opinion = Opinion.reflect_on_association(:places)
+        @opinion.macro.should == :belongs_to
+      end
+
+      it "should belong to users" do
+        @opinion = Opinion.reflect_on_association(:users)
         @opinion.macro.should == :belongs_to
       end
     end
