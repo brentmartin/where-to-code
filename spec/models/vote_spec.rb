@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Vote, type: :model do
 
   before(:each) do
-    @vote = Vote.create!(pick: "up_vote", place_id: 1)
+    @vote = Vote.create!(pick: "up_vote", place_id: 1, user_id: 1)
   end
 
   describe "creation" do
@@ -15,6 +15,15 @@ RSpec.describe Vote, type: :model do
       it "should not let a Vote be created without a pick" do
         @vote.pick = nil
         expect(@vote).to_not be_valid
+      end
+
+      context "that is from a User" do
+        it "should not let a Vote be created without a user_id" do
+          @vote.user_id = nil
+          expect(@vote).to_not be_valid
+        end
+
+        it "should have a User already created that has an ID that matches the user_id of the Vote"
       end
 
       context "that is for a Place" do
@@ -49,6 +58,11 @@ RSpec.describe Vote, type: :model do
     context "when setting up db schema for Vote" do
       it "should belong to places" do
         @vote = Vote.reflect_on_association(:places)
+        @vote.macro.should == :belongs_to
+      end
+
+      it "should belong to users" do
+        @vote = Vote.reflect_on_association(:users)
         @vote.macro.should == :belongs_to
       end
     end
