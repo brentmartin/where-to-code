@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20160808044534) do
     t.datetime "updated_at", null: false
     t.string   "pick"
     t.integer  "place_id"
+    t.integer  "user_id"
   end
 
 end
