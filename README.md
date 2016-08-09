@@ -10,13 +10,15 @@ Also, as a _budding developer_, this is a project for me to learn/practice writi
 
 How it works
 -----------
-Users can sign up, and search through an index of places in Austin where they can code. For each place there will be a map for directions, hours, and a basic description. They can also see what other coders have to say about each particular location.
+Coders can search through an index of places in Austin where they can code. Each place has a map for directions, hours, and a description. They can also see what other coders have to say about each particular location.
 
-For each place, a user can give it an **upvote** or a **downvote** and/or leave an **opinion** about it. At anytime they can change their vote, and opinion, but each user only has one opinion and vote per place, so after it is initially made, they can only update it.
+At this point, coders can signup to get involved as well.
 
-Opinions are restricted to 160 characters like a tweet. They are designed to be brief and to-the-point rather than reviews. This allows for other users to read through them quickly when trying to gather info.
+Per place, a coder can give an **upvote** or a **downvote** and/or leave an **opinion** about it, either of which they can be changed at anytime. Each coder only has one opinion and vote per place, so after it is initially made, it can only be updated.
 
-This is designed to allow general opinions on places for developers to code change quickly (as management/strategies for small businesses can change quickly) - and not to let potential old review "baggage" hold the business down (or sometimes up - making businesses have to keep **earning** the business).
+Opinions are restricted to 160 characters - like a tweet. They are meant to be **brief opinions** rather than **full reviews**, allowing for other coders to scan through them quickly to gather info.
+
+This is designed to allow general opinions on places to change quickly (as management/strategies for small businesses often changes quickly) - and not for old review "baggage" to _hold the business down_ (and in some cases, _hold it up_ - making it necessary to keep **earning** the business).
 
 Project Status
 -------------
