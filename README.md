@@ -1,8 +1,6 @@
 Where To Code
 ================
-Where to Code is a layout of places to for coders to code in Austin - curated by developers for developers.
-
-A live version of this will be up as soon as I deploy.
+Where to Code is a layout of places to for coders to code in Austin - curated by developers for developers. A live version of this will be up as soon as I deploy.
 
 Description
 -----------
