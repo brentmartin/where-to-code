@@ -22,11 +22,11 @@ Project Status
 -------------
 - [x] Model Testing
 - [x] Add authentication with [Clearance](https://github.com/thoughtbot/clearance)
+- [x] Build a Users Model
 - [ ] Controller Testing
 - [ ] View Testing
 - [ ] Initial Deployment
 - [ ] Add in [maps](https://github.com/apneadiving/Google-Maps-for-Rails)
-- [ ] Build a Users Model
 - [ ] Ship MVP
 - [ ] Get feedback
 - [ ] Make a new task list
